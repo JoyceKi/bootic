@@ -4,7 +4,8 @@ include('inc/header.inc.php');
 
 function createCarousel($db, $cat)
 {
-    $req = $db->query('SELECT id_produit, t_produit.id_categorie, titre, description, photo, nom_categorie FROM t_produit INNER JOIN t_categorie ON t_produit.id_categorie = t_categorie.id_categorie WHERE t_produit.id_categorie=' . $cat);
+    $req = $db->query('SELECT id_produit, t_produit.id_categorie, titre, description, photo, nom_categorie FROM t_produit INNER JOIN t_categorie 
+    ON t_produit.id_categorie = t_categorie.id_categorie WHERE t_produit.id_categorie=' . $cat);
 
     $res = $req->fetchAll();
     echo '<div class="col-12 col-md-6 col-lg-3">

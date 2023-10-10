@@ -18,6 +18,6 @@ img {
 }
 
   
-#footer {
-  color: white;  
+footer p {
+  color: white!important;  
 }
