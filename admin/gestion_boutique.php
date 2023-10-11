@@ -1,6 +1,6 @@
 <?php
 include('../inc/connexionBd.php');
-include('../inc/header.inc.php');
+include('./header.admin.php');
  
 
 try {

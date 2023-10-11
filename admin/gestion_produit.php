@@ -1,5 +1,5 @@
 <?php
-include('../inc/header.inc.php');
+include('./header.admin.php');
 include('../inc/connexionBd.php');
 ?>
 
@@ -14,9 +14,9 @@ include('../inc/connexionBd.php');
 <body>
     <div class="row">
         <div class="col-10">        
-            <form method='post' action='data.php' enctype="multipart/form-data">
+            <form method="post" action="data.php" enctype="multipart/form-data">
                 <div class="form-floating mb-3">
-                    <input type='text' name='reference' class="form-control" id="reference">
+                    <input type="text" name="reference" class="form-control" id="reference">
                     <label for="reference">Référence</label>
                 </div>
                 <div class="form-floating mb-3">            
@@ -30,15 +30,15 @@ include('../inc/connexionBd.php');
                     <label for="id_categorie">Catégorie</label>
                 </div>
                 <div class="form-floating mb-3">
-                    <input type='text' class="form-control" name='titre'>
+                    <input type='text' class="form-control" name="titre" id="titre">
                     <label for="titre">Nom du produit</label>
                 </div>
                 <div class="form-floating mb-3">
-                    <textarea type='text' class="form-control" name='description'></textarea>
+                    <textarea type='text' class="form-control" name="description" id="description"></textarea>
                     <label for="description">Description du produit</label>
                 </div>
                 <div class="form-floating mb-3">
-                    <input type='text' class="form-control" name="couleur">
+                    <input type='text' class="form-control" name="couleur" id="couleur">
                     <label for="couleur">Couleur</label>
                 </div>
                 <div class="form-floating mb-3">
@@ -55,18 +55,18 @@ include('../inc/connexionBd.php');
                     <label for="taille">Taille : </label>
                 </div>
                 <div class="form-floating mb-3">
-                    <input type='text' class="form-control" name="public">
+                    <input type='text' class="form-control" name="public" id="photo">
                     <label for="public">Public (m,f,mixte)</label>
                 </div>
                 <div class="input-group mb-3">
-                    <input type="file" class="form-control" name="photo">                    
+                    <input type="file" class="form-control" name="photo" id="photo">                    
                 </div>
                 <div class="form-floating mb-3">
-                    <input type='number' class="form-control" name="prix" >
+                    <input type='number' class="form-control" name="prix" id="prix" >
                     <label for="prix">Prix TTC en € </label>
                 </div>
                 <div class="form-floating mb-3">
-                    <input type='number' class="form-control" name="stock">
+                    <input type='number' class="form-control" name="stock" id="stock">
                     <label for="stock">Stock</label>
                 </div>
                 <div class="form-floating mb-3">
