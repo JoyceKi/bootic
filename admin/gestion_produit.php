@@ -55,7 +55,7 @@ include('../inc/connexionBd.php');
                     <label for="taille">Taille : </label>
                 </div>
                 <div class="form-floating mb-3">
-                    <input type='text' class="form-control" name="public" id="photo">
+                    <input type='text' class="form-control" name="public" id="public">
                     <label for="public">Public (m,f,mixte)</label>
                 </div>
                 <div class="input-group mb-3">

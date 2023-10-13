@@ -35,8 +35,7 @@ try {
                     <label for="titre">Nom du produit</label>
                 </div>
                 <div class="form-floating mb-3">
-                    <textarea type="text" class="form-control" name="description" id="description">
-                        "'.$value[4].'"
+                    <textarea type="text" class="form-control" name="description" id="description">'.$value[4].'
                     </textarea>
                     <label for="description">Description du produit</label>
                 </div>

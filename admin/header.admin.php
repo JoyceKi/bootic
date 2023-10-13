@@ -15,7 +15,7 @@
   <header>
         <nav class="navbar bg-dark navbar-expand-lg " data-bs-theme="dark" >
         <div class="container-fluid">
-            <a class="navbar-brand" href="../index.php">monsite.com</a>
+            <a class="navbar-brand" href="./../index.php">monsite.com</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
                 data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" 
                 aria-label="Toggle navigation">
@@ -24,17 +24,20 @@
             <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="/inscription.html">Inscription</a>
+                <a class="nav-link" aria-current="page" href="./../inscription.html">Inscription</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="/connexion.php">Connexion</a>
+                <a class="nav-link" href="./../connexion.php">Connexion</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="/index.php">Accès à la boutique</a>
+                <a class="nav-link" href="./../index.php">Accès à la boutique</a>
                 </li>
-                <li class="nav-item">
-                <a class="nav-link" href="/panier.php">Voir votre panier</a>
-                </li>
+                <?php if ($pseudo) {
+                        echo '<li class="nav-item">
+                        <a class="nav-link" href="profil.php">profil</a>
+                        </li>';
+                    }
+                ?>
             </ul>
             </div>
         </div>

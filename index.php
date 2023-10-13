@@ -1,6 +1,6 @@
 <?php
 // Affiche tous les articles de la boutique
-include('inc/header.inc.php');
+include('./inc/header.inc.php');
 
 function createCarousel($db, $cat)
 {
@@ -39,8 +39,8 @@ try {
     $db = new PDO($dsn, $username, $password);
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    echo '<div class="container">
-    <div class="row">';
+    echo '<div class="container mt-5">
+    <div class="row align-content-center">';
         createCarousel($db, 1);
         createCarousel($db, 3);
         createCarousel($db, 4);
