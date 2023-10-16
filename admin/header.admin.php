@@ -24,17 +24,17 @@
             <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="./../inscription.html">Inscription</a>
+                <a class="nav-link" aria-current="page" href="./../inscription.php">Inscription</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="./../connexion.php">Connexion</a>
+                <a class="nav-link" href="../connexion.php">Connexion</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="./../index.php">Accès à la boutique</a>
+                <a class="nav-link" href="../index.php">Accès à la boutique</a>
                 </li>
                 <?php if ($pseudo) {
                         echo '<li class="nav-item">
-                        <a class="nav-link" href="profil.php">profil</a>
+                        <a class="nav-link active" href="../profil.php">profil</a>
                         </li>';
                     }
                 ?>

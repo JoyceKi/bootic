@@ -1,18 +1,19 @@
 <?php
-// include('inc/header.inc.php');
 session_start();
+include('./inc/header.inc.php');
+
 if (isset($_SESSION['pseudo'])) {
     $pseudo = $_SESSION['pseudo'];
 }
 // On ouvre une session et on vérifie que le pseudo existe bien 
 
-include('./../connexion.php');
+include('./inc/connexionBd.php');
 // La page d'inscription pour les futurs clients
 // On fait un header avec un lien profil qui apparaît ds la navbar 
 // que si la session est active
 ?>
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="fr">
 
 <head>
@@ -31,7 +32,7 @@ include('./../connexion.php');
   <header>
         <nav class="navbar bg-dark navbar-expand-lg " data-bs-theme="dark" >
             <div class="container-fluid">
-                <a class="navbar-brand" href="./index.php">monsite.com</a>
+                <a class="navbar-brand" href="./index.php">Bootic.com</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
                     data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" 
                     aria-label="Toggle navigation">
@@ -39,7 +40,7 @@ include('./../connexion.php');
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto mb-2">
+                <ul class="navbar-nav me-auto">
                     <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="./inscription.php">Inscription</a>
                     </li>
@@ -56,13 +57,12 @@ include('./../connexion.php');
                 </div>
             </div>
         </nav>
-    </header>
+    </header> -->
 <div class="container">
     <div class="row">
-        <div class="col-9">
+        <div class="col-sm-12 col-md-9 col-lg-9">
         <form action="./admin/admin.php" method="post">
             <div class="form-floating mb-3">
-                <input type="hidden" name="action" value="inscription">
                 <input type="text" name="pseudo" class="form-control" id="pseudo"
                 placeholder="Pseudo">
                 <label for="pseudo">Votre pseudo : </label>
@@ -115,6 +115,7 @@ include('./../connexion.php');
                 <label for="address">Adresse :</label>
             </div>         
             <div class="form-floating mb-3">
+                <input type="hidden" name="action" value="inscription">
                 <input type="submit" class="form-control-secondary ms-5" value="S'inscrire">
             </div>
         </form>
@@ -125,4 +126,4 @@ include('./../connexion.php');
 <?php
 
 
-include('inc/footer.inc.php');
+include('./inc/footer.inc.php');

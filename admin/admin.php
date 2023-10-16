@@ -1,9 +1,18 @@
 <?php
 session_start();
-include('./../header.admin.php');
+
+// on vérifie que la variable de session pseudo existe
+if (isset($_SESSION['pseudo'])) {
+    $pseudo = $_SESSION['pseudo'];
+}
+
 include('../inc/connexionBd.php');
 
 $action = isset($_POST['action']);
+$connexion = isset($_POST['connexion']);
+echo '<pre>';
+var_dump($action);
+echo '</pre>';
 
 if ($action == "inscription") {
     $pseudo = htmlspecialchars($_POST['pseudo']);
@@ -37,7 +46,8 @@ if ($action == "inscription") {
     $db = null;
     
     echo 'Entrée ajouté dans la table';
-} else {
+    
+} elseif ($connexion == "connexion") {
     $pseudo = htmlspecialchars($_POST['pseudo']);
     $mdp = htmlspecialchars($_POST['mdp']);
 
@@ -54,7 +64,7 @@ if ($action == "inscription") {
         if (password_verify($mdp, $result['mdp'])) {
             // on définit des variables de session
             $_SESSION['pseudo'] = $result['pseudo'];
-            header('location: profil.php');
+            header('location: ../profil.php');
         } else {
             echo "Vous n'êtes pas inscrit(e)";
         }

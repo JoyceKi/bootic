@@ -1,6 +1,12 @@
 <?php
 // Affiche tous les articles de la boutique
-include('./inc/header.inc.php');
+session_start();
+
+// on vérifie que la variable de session pseudo existe
+if (isset($_SESSION['pseudo'])) {
+    $pseudo = $_SESSION['pseudo'];
+}
+include('inc/header.inc.php');
 
 function createCarousel($db, $cat)
 {

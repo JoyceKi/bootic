@@ -62,7 +62,11 @@ require 'functions.php';
                     <div class="card-body">
                         <?php
                         if ($pseudo) {
+                            echo '<pre>';
+                            var_dump($pseudo);
+                            echo '</pre>';
                             $membre = getProfile($pseudo);
+                           
                         ?>
                             <h5 class="card-title">Bonjour <?= $_SESSION['pseudo']; ?></h5>
                             <p class="card-text">Votre email est : <?= $membre[5]; ?></p>

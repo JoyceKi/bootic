@@ -46,6 +46,7 @@ if ($action == "inscription") {
     // On regarde si le pseudo existe dans la base
     $sql = "SELECT * FROM t_membre WHERE pseudo = ?";
     $req = $dbco->prepare($sql);
+    
     $req->bindValue(1, $pseudo, PDO::PARAM_STR);
     $req->execute();
     $result = $req->fetch(PDO::FETCH_BOTH);

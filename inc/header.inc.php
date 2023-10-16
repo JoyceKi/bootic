@@ -7,7 +7,7 @@
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">    
     <title>Bootic</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="./../inc/css/styles.css">
+    <link rel="stylesheet" href="inc/css/styles.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="inc/js/main.js" defer></script>
 </head>
@@ -15,12 +15,13 @@
   <header>
         <nav class="navbar bg-dark navbar-expand-lg " data-bs-theme="dark" >
         <div class="container-fluid">
-            <a class="navbar-brand" href="./index.php">monsite.com</a>
+            <a class="navbar-brand" href="./index.php">Bootic.com</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
                 data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" 
                 aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
